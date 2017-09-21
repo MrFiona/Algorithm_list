@@ -33,11 +33,15 @@ def remove_num(unsort_num_list, left, right):
     low = left
     high = right
     while low < high:
+        #todo 基准点在首位，所以先从最后一个位置向前移动直至找到一个比基准数小的数
         while (low < high) and (unsort_num_list[high] >= key):
             high -= 1
+
         unsort_num_list[low] = unsort_num_list[high]
+        #todo 从基准位置开始向后移动直至找到一个比基准数大的数
         while (low < high) and (unsort_num_list[low] <= key):
             low += 1
+
         unsort_num_list[high] = unsort_num_list[low]
         unsort_num_list[low] = key
 
@@ -67,9 +71,6 @@ for num in init_num_list:
 
 print
 print time.time() - start
-
-
-
 
 
 
