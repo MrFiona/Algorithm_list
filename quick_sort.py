@@ -71,9 +71,3 @@ for num in init_num_list:
 
 print
 print time.time() - start
-
-
-
-
-
-
